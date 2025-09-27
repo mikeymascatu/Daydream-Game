@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+    public int health;
+    public float speed;
+
+    private Animator anim;
+    void Start(){
+        anim = GetComponent<Animator>();
+        anim.SetBool("isRunning", true);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+    }
+    public void TakeDamage(int damage){
+        health -= damage;
     }
 }
