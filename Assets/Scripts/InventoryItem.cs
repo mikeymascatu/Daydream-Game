@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using static Inventory;
+
 
 public class InventoryItem : MonoBehaviour, IPointerClickHandler
 {
     Image itemIcon;
-    public CanvasGroup canavsGroup { get; private set; }
+    public CanvasGroup canvasGroup { get; private set; }
 
     public Item myItem { get; set; }
     public InventorySlot activeSlot { get; set; }
@@ -30,7 +30,7 @@ public class InventoryItem : MonoBehaviour, IPointerClickHandler
     {
         if(eventData.button == PointerEventData.InputButton.Left)
         {
-            InventoryItem.Singleton.SetCarriedItem(this);
+            Inventory.Singcarleton.SetCarriedItem(this);
         }
 
     }
