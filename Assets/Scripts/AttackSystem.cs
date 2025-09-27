@@ -102,3 +102,4 @@ public class AttackSystem : MonoBehaviour
 
 // Optional: a simple interface every damageable thing can implement
 public interface IDamageable { void TakeDamage(int amount); }
+*/
