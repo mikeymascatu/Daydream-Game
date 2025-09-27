@@ -470,6 +470,7 @@ GameObject:
   - component: {fileID: 436292387}
   - component: {fileID: 436292386}
   - component: {fileID: 436292391}
+  - component: {fileID: 436292392}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -490,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  speed: -5
+  speed: -3
 --- !u!50 &436292387
 Rigidbody2D:
   serializedVersion: 5
@@ -671,6 +672,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.60480046, y: 1.0293676}
   m_EdgeRadius: 0
+--- !u!95 &436292392
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436292385}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &444166040
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,8 +4249,8 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64
-  attackRange: 0.35
-  damage: 0
+  attackRange: 0.5
+  damage: 1
 --- !u!1001 &1902514961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4417,20 +4440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   parallaxEffect: 1
---- !u!114 &280060612924155762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913355292856396633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 0
 --- !u!1 &295682984274389716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4522,20 +4531,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &469325493133825545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7134125438227290367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 0
 --- !u!212 &521638639409214223
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4860,8 +4855,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3627301130211200325}
-  - component: {fileID: 4948561365606772658}
-  - component: {fileID: 280060612924155762}
   m_Layer: 0
   m_Name: BG2
   m_TagString: Untagged
@@ -5152,20 +5145,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3627301130211200325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4507522964530043499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7117408024978519923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 0
 --- !u!114 &4645493856651271600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5194,20 +5173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   parallaxEffect: 0
---- !u!114 &4948561365606772658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913355292856396633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 0
 --- !u!114 &5206895706232405240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5222,20 +5187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   parallaxEffect: 1
---- !u!114 &5498504897673798237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7134125438227290367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 0
 --- !u!4 &5880698438335432622
 Transform:
   m_ObjectHideFlags: 0
@@ -5352,20 +5303,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   parallaxEffect: 1
---- !u!114 &6961635493569805533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7117408024978519923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 519420028}
-  parallaxEffect: 0
 --- !u!1 &7117408024978519923
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,8 +5312,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 140001272440822650}
-  - component: {fileID: 6961635493569805533}
-  - component: {fileID: 4507522964530043499}
   m_Layer: 0
   m_Name: BG0
   m_TagString: Untagged
@@ -5393,8 +5328,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2149141024423290088}
-  - component: {fileID: 469325493133825545}
-  - component: {fileID: 5498504897673798237}
   m_Layer: 0
   m_Name: BG1
   m_TagString: Untagged

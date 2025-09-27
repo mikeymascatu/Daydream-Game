@@ -19,7 +19,10 @@ public class Enemy : MonoBehaviour
         }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
-    public void TakeDamage(int damage){
+    public void TakeDamage(int damage)
+    {
         health -= damage;
+        Debug.Log("enemy damaged, health remaining:" + health);
+
     }
 }
