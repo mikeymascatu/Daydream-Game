@@ -3,22 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using static Inventory;
 
 public class InventoryItem : MonoBehaviour, IPointerClickHandler
 {
     Image itemIcon;
-    public CanvasGroup canavsGroupe { get; private set; }
+    public CanvasGroup canavsGroup { get; private set; }
 
     public Item myItem { get; set; }
     public InventorySlot activeSlot { get; set; }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         canavsGroup = GetComponent<canavsGroup>();
         itemIcon = GetComponent<Image>();
     }
 
-    public void Initialize(Item item, inventorySlot parent)
+    public void Initialize(Item item, InventorySlot parent)
     {
         activeSlot = parent;
         activeSlot.myItem = this;
@@ -34,9 +34,5 @@ public class InventoryItem : MonoBehaviour, IPointerClickHandler
         }
 
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
