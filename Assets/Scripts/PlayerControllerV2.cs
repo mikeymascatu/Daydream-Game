@@ -20,7 +20,7 @@ public class PlayerControllerV2 : MonoBehaviour {
     private int extraJumps;
 
 
-    void start() {
+    void Start() {
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
     }
