@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public enum SlotTag { None, Head, Chest, Legs, Feet}
 
-[CreateAssestMenu(menuName = "Scriptable Objects/Item")]
+[CreateAssetMenu(menuName = "Scriptable Objects/Item")]
 public class Item: ScriptableObject
 {
     public Sprite sprite;
