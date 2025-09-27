@@ -13,6 +13,10 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+
+        if (health <= 0){
+            Destroy(gameObject);
+        }
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
     public void TakeDamage(int damage){
