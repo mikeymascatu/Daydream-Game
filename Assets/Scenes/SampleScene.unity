@@ -231,8 +231,9 @@ GameObject:
   m_Component:
   - component: {fileID: 34289867}
   - component: {fileID: 34289868}
+  - component: {fileID: 34289869}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0002_fill-these-are-rock-pillars
+  m_Name: BG2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,11 +248,11 @@ Transform:
   m_GameObject: {fileID: 34289866}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.66, y: 3.38, z: 17.75}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: -7.6599994, y: 3.3799999, z: 17.749998}
+  m_LocalScale: {x: 2.4999998, y: 2.4999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 1626680545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &34289868
 SpriteRenderer:
@@ -308,6 +309,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &34289869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34289866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 1
 --- !u!1 &45009966
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,8 +333,9 @@ GameObject:
   m_Component:
   - component: {fileID: 45009967}
   - component: {fileID: 45009968}
+  - component: {fileID: 45009969}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0002_fill-these-are-rock-pillars (1)
+  m_Name: BG2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -334,11 +350,11 @@ Transform:
   m_GameObject: {fileID: 45009966}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.089999, y: 3.38, z: 17.75}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: 9.089999, y: 3.3799999, z: 17.749998}
+  m_LocalScale: {x: 2.4999998, y: 2.4999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 1626680545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &45009968
 SpriteRenderer:
@@ -395,6 +411,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &45009969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45009966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 1
 --- !u!1001 &133648583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -609,8 +639,9 @@ GameObject:
   m_Component:
   - component: {fileID: 249222510}
   - component: {fileID: 249222511}
+  - component: {fileID: 249222512}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0002_fill-these-are-rock-pillars (2)
+  m_Name: BG2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,11 +656,11 @@ Transform:
   m_GameObject: {fileID: 249222509}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.849998, y: 3.38, z: 17.75}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: 23.849997, y: 3.3799999, z: 17.749998}
+  m_LocalScale: {x: 2.4999998, y: 2.4999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 1626680545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &249222511
 SpriteRenderer:
@@ -686,6 +717,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &249222512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249222509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 1
 --- !u!1 &255837064
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,8 +741,9 @@ GameObject:
   m_Component:
   - component: {fileID: 255837065}
   - component: {fileID: 255837066}
+  - component: {fileID: 255837067}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0000_Layer-0 (2)
+  m_Name: BG0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -712,11 +758,11 @@ Transform:
   m_GameObject: {fileID: 255837064}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.849998, y: 3.38, z: 12.22}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: 10.496313, y: 0.9341178, z: -4.2152576}
+  m_LocalScale: {x: 2.487375, y: 2.487375, z: 0.99495}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 375742390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &255837066
 SpriteRenderer:
@@ -773,6 +819,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &255837067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255837064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0
 --- !u!1 &265452299
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +864,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1875474791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &375742389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 375742390}
+  - component: {fileID: 375742392}
+  - component: {fileID: 375742391}
+  m_Layer: 0
+  m_Name: BG0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &375742390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375742389}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.300408, y: 2.441141, z: 16.456652}
+  m_LocalScale: {x: 1.0050756, y: 1.0050756, z: 1.0050756}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1825432604}
+  - {fileID: 1674085035}
+  - {fileID: 255837065}
+  m_Father: {fileID: 2141015396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &375742391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375742389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0
+--- !u!114 &375742392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375742389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0
 --- !u!1 &444166040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,8 +1652,9 @@ GameObject:
   m_Component:
   - component: {fileID: 519024580}
   - component: {fileID: 519024581}
+  - component: {fileID: 519024582}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0001_fill (1)
+  m_Name: BG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1544,11 +1669,11 @@ Transform:
   m_GameObject: {fileID: 519024579}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.089999, y: 3.38, z: 15.01}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: 9.089999, y: 3.3799999, z: 15.009999}
+  m_LocalScale: {x: 2.4999998, y: 2.4999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 1130872876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &519024581
 SpriteRenderer:
@@ -1605,6 +1730,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &519024582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519024579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1876,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0024720728, y: 0.0053811073, z: -10}
+  m_LocalPosition: {x: -0.48, y: 0.0053811073, z: -10}
   m_LocalScale: {x: 0.99495, y: 0.99495, z: 0.99495}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2783,6 +2922,70 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1130872875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1130872876}
+  - component: {fileID: 1130872878}
+  - component: {fileID: 1130872877}
+  m_Layer: 0
+  m_Name: BG1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1130872876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130872875}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2063904635}
+  - {fileID: 519024580}
+  - {fileID: 1159614478}
+  m_Father: {fileID: 2141015396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130872877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130872875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0
+--- !u!114 &1130872878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130872875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0
 --- !u!1 &1159614477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,8 +2996,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1159614478}
   - component: {fileID: 1159614479}
+  - component: {fileID: 1159614480}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0001_fill
+  m_Name: BG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2809,11 +3013,11 @@ Transform:
   m_GameObject: {fileID: 1159614477}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.66, y: 3.38, z: 15.01}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: -7.6599994, y: 3.3799999, z: 15.009999}
+  m_LocalScale: {x: 2.4999998, y: 2.4999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 1130872876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1159614479
 SpriteRenderer:
@@ -2870,6 +3074,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1159614480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159614477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.5
 --- !u!1001 &1191694201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3482,6 +3700,70 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6919615187559521997, guid: 45711abf15c0b4346a345e7df4d329ee, type: 3}
   m_PrefabInstance: {fileID: 1611104807}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1626680544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626680545}
+  - component: {fileID: 1626680547}
+  - component: {fileID: 1626680546}
+  m_Layer: 0
+  m_Name: BG2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1626680545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626680544}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 249222510}
+  - {fileID: 45009967}
+  - {fileID: 34289867}
+  m_Father: {fileID: 2141015396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1626680546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626680544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0
+--- !u!114 &1626680547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626680544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0
 --- !u!1001 &1637453139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3696,8 +3978,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1674085035}
   - component: {fileID: 1674085036}
+  - component: {fileID: 1674085037}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0000_Layer-0
+  m_Name: BG0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3712,11 +3995,11 @@ Transform:
   m_GameObject: {fileID: 1674085034}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.66, y: 3.38, z: 12.22}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: -20.854559, y: 0.9341178, z: -4.2152576}
+  m_LocalScale: {x: 2.487375, y: 2.487375, z: 0.99495}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 375742390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1674085036
 SpriteRenderer:
@@ -3773,6 +4056,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1674085037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674085034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0
 --- !u!1001 &1679808809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4360,8 +4657,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1825432604}
   - component: {fileID: 1825432605}
+  - component: {fileID: 1825432606}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0000_Layer-0 (1)
+  m_Name: BG0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4376,11 +4674,11 @@ Transform:
   m_GameObject: {fileID: 1825432603}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.09, y: 3.38, z: 12.22}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: -4.189146, y: 0.9341178, z: -4.2152576}
+  m_LocalScale: {x: 2.487375, y: 2.487375, z: 0.99495}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 375742390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1825432605
 SpriteRenderer:
@@ -4437,6 +4735,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1825432606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825432603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0
 --- !u!1 &1827183104
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,8 +5096,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2063904635}
   - component: {fileID: 2063904636}
+  - component: {fileID: 2063904637}
   m_Layer: 0
-  m_Name: Grapple-Ball-Pin-Daydream-Hackathon_0001_fill (2)
+  m_Name: BG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4800,11 +5113,11 @@ Transform:
   m_GameObject: {fileID: 2063904634}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.85, y: 3.38, z: 15.01}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: 23.849998, y: 3.3799999, z: 15.009999}
+  m_LocalScale: {x: 2.4999998, y: 2.4999998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2141015396}
+  m_Father: {fileID: 1130872876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2063904636
 SpriteRenderer:
@@ -4861,6 +5174,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2063904637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063904634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f65ba453edae4fcab09ca90fb2d1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.5
 --- !u!1 &2141015395
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,19 +5213,13 @@ Transform:
   m_GameObject: {fileID: 2141015395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.81, y: -3.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1674085035}
-  - {fileID: 1825432604}
-  - {fileID: 255837065}
-  - {fileID: 2063904635}
-  - {fileID: 249222510}
-  - {fileID: 519024580}
-  - {fileID: 45009967}
-  - {fileID: 1159614478}
-  - {fileID: 34289867}
+  - {fileID: 375742390}
+  - {fileID: 1130872876}
+  - {fileID: 1626680545}
   m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3819986028364954270
