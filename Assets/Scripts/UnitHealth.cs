@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitHealth
+public class UnitHealth : MonoBehaviour 
 {
     //fields
-    int _currentHealth;
-    int _currentMaxHealth;
+    public int _currentHealth;
+    public int _currentMaxHealth;
 
     // Properties
     public int Health
