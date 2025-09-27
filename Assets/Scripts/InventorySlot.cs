@@ -11,7 +11,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         if(eventData.button == PointerEventData.InputButton.Left)
         {
             if(Inventory.carriedItem == null) return;
-            if(myTag != SlotTag.None && Inventory.carriedItem.myItem.itemTag != myTag) return;
+            if(myTag != SlotTag.None) return;
             SetItem(Inventory.carriedItem);
         }
     }
@@ -26,7 +26,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         myItem = item;
         myItem.activeSlot = this;
         myItem.transform.SetParent(transform);
-        myItem.canavsGroup.blocksRaycasts = true;
+        myItem.canvasGroup.blocksRaycasts = true;
 
         if(myTag != SlotTag.None)
         { Inventory.Singleton.EquipEquipment(myTag, myItem);}

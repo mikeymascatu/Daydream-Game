@@ -14,7 +14,7 @@ public class InventoryItem : MonoBehaviour, IPointerClickHandler
     public InventorySlot activeSlot { get; set; }
     void Awake()
     {
-        canvasGroup = GetComponent<canvasGroup>();
+        canvasGroup = GetComponent<CanvasGroup>();
         itemIcon = GetComponent<Image>();
     }
 
@@ -30,7 +30,7 @@ public class InventoryItem : MonoBehaviour, IPointerClickHandler
     {
         if(eventData.button == PointerEventData.InputButton.Left)
         {
-            Inventory.Singcarleton.SetCarriedItem(this);
+            Inventory.Singleton.SetCarriedItem(this);
         }
 
     }
