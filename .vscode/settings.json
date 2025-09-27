@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Daydream_game.sln"
+    "dotnet.defaultSolution": "Daydream-Game.sln"
 }
