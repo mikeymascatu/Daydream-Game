@@ -11,14 +11,14 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         if(eventData.button == PointerEventData.InputButton.Left)
         {
             if(Inventory.carriedItem == null) return;
-            if(myTag != SlotTag.None && InventorySlot.carriedItem.myItem.itemTag != myTag) return;
+            if(myTag != SlotTag.None) return;
             SetItem(Inventory.carriedItem);
         }
     }
     //setting up slots
     public void SetItem(InventoryItem item)
     {
-        InventorySlot.carriedItem = null;
+        Inventory.carriedItem = null;
         //reset old slot
         item.activeSlot.myItem = null;
 
@@ -26,10 +26,10 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         myItem = item;
         myItem.activeSlot = this;
         myItem.transform.SetParent(transform);
-        myItem.canavsGroup.blocksRaycasts = true;
+        myItem.canvasGroup.blocksRaycasts = true;
 
-        if(myTag != SlotTag.none)
-        { InventorySlot.Singleton.EquipEquipment(myTag, myItem);}
+        if(myTag != SlotTag.None)
+        { Inventory.Singleton.EquipEquipment(myTag, myItem);}
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

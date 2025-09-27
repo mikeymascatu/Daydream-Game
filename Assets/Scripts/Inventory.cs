@@ -32,8 +32,7 @@ public class Inventory : MonoBehaviour
         Item _item = item;
         if(_item == null)
         {
-            int random = random.Range(0, items.Length);
-            _item = items[random];
+
         }
 
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -57,7 +56,7 @@ public class Inventory : MonoBehaviour
     {
         if(carriedItem != null)
         {
-            if(item.activeSlot.myTag != SlotTag.None && item.activeSlot.myTag != carriedItem.myItem.itemTag) return;
+            if(item.activeSlot.myTag != SlotTag.None) return;
             item.activeSlot.SetItem(carriedItem);
         }
 
@@ -65,7 +64,7 @@ public class Inventory : MonoBehaviour
         {EquipEquipment(item.activeSlot.myTag, null);}
 
         carriedItem = item;
-        carriedItem.canvasGroup.blockRaycasts = false;
+        carriedItem.canvasGroup.blocksRaycasts = false;
         item.transform.SetParent(draggablesTransform);
     
     }
