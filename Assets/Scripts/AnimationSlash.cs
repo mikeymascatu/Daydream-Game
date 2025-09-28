@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnimatorTriggerTest : MonoBehaviour
+public class AnimationSlash : MonoBehaviour
 {
     [SerializeField] Animator anim;
     [SerializeField] string triggerName = "Q Attack"; // EXACT name from your Animator parameter
