@@ -37,7 +37,7 @@ public class PlayerInventory : MonoBehaviour
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         RecalculateGravity();
-        RecalculateDamageOutput();
+        //GetTotalDamage();
     }
 
     void Update()
@@ -63,7 +63,7 @@ public class PlayerInventory : MonoBehaviour
         {
             stack.count += amount;
             RecalculateGravity();
-            RecalculateDamageOutput();
+            //GetTotalDamage();
             return true;
         }
 
@@ -72,7 +72,7 @@ public class PlayerInventory : MonoBehaviour
         {
             items.Add(new ItemStack(itemToAdd, amount));
             RecalculateGravity();
-            RecalculateDamageOutput();
+            //GetTotalDamage();
             return true;
         }
 
@@ -109,10 +109,10 @@ public class PlayerInventory : MonoBehaviour
         if (stack.count <= 0) items.RemoveAt(slotIndex);
 
         RecalculateGravity();
-        RecalculateDamageOutput();
+        //GetTotalDamage();
         return true;
     }
-
+    
     public void RecalculateGravity()
     {
         float totalWeight = 0f;
@@ -121,15 +121,16 @@ public class PlayerInventory : MonoBehaviour
 
         targetGravity = Mathf.Clamp(baseGravityScale + totalWeight * gravityPerWeight, minGravity, maxGravity);
     }
-
-    public void RecalculateDamageOutput()
-    {
-        foreach (var s in items)
-        {
-            totalDamage += (s.item != null ? s.item.weaponDamage * s.count : 0f);
-        }
-
+    /*
+    public int GetTotalDamage(){
+    int total = 0;
+    foreach (var stack in items){
+        if (stack.item != null)
+            total += stack.item.weaponDamage * stack.count;
     }
+        return total;
+    }
+    */
     
 
 

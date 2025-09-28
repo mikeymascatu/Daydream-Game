@@ -10,12 +10,13 @@ public class AttackSystem : MonoBehaviour
     public LayerMask whatIsEnemies;
     public float attackRange = 0.8f;
     public int damage = 1;
+    [SerializeField] public int totalDamage;
 
     [Header("Audio")]
     [SerializeField] AudioSource sfx;       // assign (or it will try to auto-find in Awake)
     [SerializeField] AudioClip swingSfx;    // whoosh
     [SerializeField] AudioClip hitSfx;      // impact
-    [SerializeField] public int totalDamage;
+
     [Range(0f, 1f)] public float swingVol = 1f;
     [Range(0f,1f)] public float hitVol   = 1f;
 

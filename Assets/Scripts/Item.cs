@@ -10,7 +10,7 @@ public class Item: ScriptableObject
     public Sprite sprite;
     public string displayName;
     public float weight = 1f;
-    public float weaponDamage = 1f;
+    public int weaponDamage = 1;
     public GameObject worldPrefab;
 }
 
