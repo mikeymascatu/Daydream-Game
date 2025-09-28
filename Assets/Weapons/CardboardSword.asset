@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a700f858bcef1249a46e1ad94772981, type: 3}
   m_Name: CardboardSword
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: a671477bdd17ddb46aca7d46f2a6225f, type: 3}
   displayName: The Paper Cutter
   weight: 1
   weaponDamage: 1
