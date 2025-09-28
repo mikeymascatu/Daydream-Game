@@ -8,12 +8,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void StartGame()
     {
-        if (string.IsNullOrEmpty(gameSceneName))
-        {
-            Debug.LogError("[MainMenuUI] gameSceneName is empty. Set it in the Inspector.");
-            return;
-        }
-        SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
 
     public void QuitGame()

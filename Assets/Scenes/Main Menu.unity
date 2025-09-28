@@ -146,14 +146,14 @@ RectTransform:
   m_GameObject: {fileID: 126743752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35055, y: 0.44502792, z: 1}
+  m_LocalScale: {x: 0.40814534, y: 0.39978638, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1585874670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -335, y: -139}
+  m_AnchoredPosition: {x: -335, y: -134}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126743754
@@ -507,14 +507,14 @@ RectTransform:
   m_GameObject: {fileID: 1283777128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35055, y: 0.387385, z: 1}
+  m_LocalScale: {x: 0.32930318, y: 0.3639056, z: 0.93939}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1585874670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -334.65576, y: -126.36149}
+  m_AnchoredPosition: {x: -365, y: -126.36149}
   m_SizeDelta: {x: 1149.217, y: 649.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283777130
@@ -546,15 +546,15 @@ MonoBehaviour:
 
     Close inventory with [ESC]
 
-    Drop items by double-clicking
-    them in the inventory
+    Drop items by double-clicking them
+    in the inventory
 
     Attack with [Q]
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8fdfda04cbb2eed48ad7404073f05417, type: 2}
+  m_sharedMaterial: {fileID: 2947182203587979858, guid: 8fdfda04cbb2eed48ad7404073f05417, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -219.37366, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
