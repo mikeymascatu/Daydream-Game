@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
@@ -48,7 +49,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     void Die()
     {
         OnDied?.Invoke();
-        // Example: disable controls / respawn later
-        // gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

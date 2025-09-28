@@ -5,15 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - Enemy
+  - Lava
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Water
   - Water
   - UI
   - Enemy
-  - 
+  - Ground
   - 
   - 
   - 

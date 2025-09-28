@@ -483,9 +483,9 @@ GameObject:
   - component: {fileID: 153064109}
   - component: {fileID: 153064108}
   - component: {fileID: 153064107}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15832,7 +15832,7 @@ GameObject:
   - component: {fileID: 444166046}
   - component: {fileID: 444166045}
   - component: {fileID: 444166044}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24364,7 +24364,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -26776,7 +26776,7 @@ MonoBehaviour:
   checkRadius: 0.5
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   maxJumpsValue: 0
   fallDetector: {fileID: 0}
 --- !u!114 &1875474798
