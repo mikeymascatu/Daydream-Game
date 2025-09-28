@@ -1,61 +1,92 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerV2 : MonoBehaviour {
-    public float speed;
-    public float jumpForce;
-    private float moveInput;
+/// <summary>
+/// PlayerControllerV2 (no animation):
+/// - Horizontal movement with Rigidbody2D in FixedUpdate
+/// - Multi-jump with reset on ground
+/// - Ground check via OverlapCircle
+/// - Sprite flip
+/// </summary>
+public class PlayerControllerV2 : MonoBehaviour
+{
+    [Header("Movement")]
+    [SerializeField] float speed = 6f;
+    [SerializeField] float jumpForce = 12f;
 
-    private Rigidbody2D rb;
+    [Header("Jumping")]
+    [SerializeField] int extraJumpsValue = 1; // additional jumps while airborne
 
-    private bool facingRight = true;
+    [Header("Ground Check")]
+    [SerializeField] Transform groundCheck;    // assign in Inspector (child at feet)
+    [SerializeField] float checkRadius = 0.15f;
+    [SerializeField] LayerMask whatIsGround;
 
-    private bool isGrounded;
-    public Transform groundCheck;
-    public float checkRadius;
-    public LayerMask whatIsGround;
+    Rigidbody2D rb;
+    bool facingRight = true;
+    bool isGrounded;
+    int extraJumps;
+    float moveInput; // read in Update, applied in FixedUpdate
 
-    public int extraJumpsValue = 2;
-    private int extraJumps;
-
-
-    void Start() {
-        extraJumps = extraJumpsValue;
+    void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
+        if (!rb)
+        {
+            Debug.LogError("[PlayerControllerV2] Missing Rigidbody2D.", this);
+            enabled = false; return;
+        }
     }
 
-    void FixedUpdate() {
+    void Start()
+    {
+        extraJumps = extraJumpsValue;
+    }
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+    void Update()
+    {
+        // Gather input
+        moveInput = Input.GetAxisRaw("Horizontal"); // -1, 0, 1
 
-        moveInput = Input.GetAxis("Horizontal");
+        // Jump handling
+        if (isGrounded) extraJumps = extraJumpsValue;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isGrounded || extraJumps > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                if (!isGrounded) extraJumps--;
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        // Ground check (null-safe)
+        isGrounded = groundCheck
+            ? Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround)
+            : false;
+
+        // Horizontal movement (preserve Y velocity from gravity/jumps)
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
 
-        if (facingRight == false && moveInput > 0) {
-            Flip();
-        } else if (facingRight == true && moveInput < 0) {
-            Flip();
-        }
+        // Flip sprite to face movement direction
+        if (moveInput > 0f && !facingRight) Flip();
+        else if (moveInput < 0f && facingRight) Flip();
     }
 
-    void Update() {
-        if (isGrounded == true) {
-            extraJumps = extraJumpsValue;
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0) {
-            rb.linearVelocity = Vector2.up * jumpForce;
-            extraJumps--;
-        } else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true) {
-            rb.linearVelocity = Vector2.up * jumpForce;
-        }
-    }
-
-    void Flip(){
+    void Flip()
+    {
         facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+        var s = transform.localScale;
+        s.x *= -1f;
+        transform.localScale = s;
     }
-    
+
+    void OnDrawGizmosSelected()
+    {
+        if (!groundCheck) return;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+    }
 }

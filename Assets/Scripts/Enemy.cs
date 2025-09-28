@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     private Animator anim;
     void Start(){
         anim = GetComponent<Animator>();
-        anim.SetBool("isRunning", true);
+        //anim.SetBool("isRunning", true);
     }
 
     // Update is called once per frame

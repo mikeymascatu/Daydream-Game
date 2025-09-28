@@ -10,6 +10,7 @@ public class AttackSystem : MonoBehaviour
     public float attackRange;
     public int damage;
 
+
     // Update is called once per frame
     void Update()
     {
