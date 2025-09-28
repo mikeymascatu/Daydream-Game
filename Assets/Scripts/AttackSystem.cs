@@ -3,50 +3,6 @@ using UnityEngine;
 public class AttackSystem : MonoBehaviour
 {
     private float timeBtwAttack;
-    public float startTimeBtwAttack;
-
-    public Transform attackPos;
-    public LayerMask whatIsEnemies;
-    public float attackRange;
-    public int damage;
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (timeBtwAttack <= 0)
-        {
-
-            if (Input.GetKey(KeyCode.Q))
-            {
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
-                }
-            }
-            timeBtwAttack = startTimeBtwAttack;
-        }
-        else
-        {
-            timeBtwAttack -= Time.deltaTime;
-        }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
-    }
-        
-}
-
-/*
-using UnityEngine;
-
-public class AttackSystem : MonoBehaviour
-{
-    private float timeBtwAttack;
     public float startTimeBtwAttack = 0.3f;
 
     public Transform attackPos;
@@ -54,10 +10,19 @@ public class AttackSystem : MonoBehaviour
     public float attackRange = 0.8f;
     public int damage = 1;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource sfx;    // assign in Inspector (or will auto-find)
+    [SerializeField] private AudioClip swingSfx; // normal swing/whoosh
+    [SerializeField] private AudioClip hitSfx;   // impact when an enemy is hit
+    [Range(0f,1f)] public float swingVol = 1f;
+    [Range(0f,1f)] public float hitVol   = 1f;
+
+    
     void Awake()
     {
-        // Fallback so you don't null-ref if you forget to assign attackPos
-        if (!attackPos) attackPos = transform;
+        if (!attackPos) attackPos = transform;          // fallback so we never null-ref
+        if (!sfx) sfx = GetComponent<AudioSource>();
+        if (!sfx) sfx = GetComponentInChildren<AudioSource>();
     }
 
     void Update()
@@ -68,27 +33,30 @@ public class AttackSystem : MonoBehaviour
             return;
         }
 
-        // Only trigger when actually pressed this frame
+        // Fire once per key press
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            // OverlapCircleAll will only return colliders on layers in whatIsEnemies
-            Collider2D[] hits = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+            // 1) Play swing immediately (whoosh)
+            if (sfx && swingSfx) sfx.PlayOneShot(swingSfx, swingVol);
+
+            // 2) Hit check + damage
+            var hits = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+            bool anyHit = false;
 
             for (int i = 0; i < hits.Length; i++)
             {
-                // Prefer an interface (see below), but keep a fallback to your Enemy script
-                if (hits[i].TryGetComponent<IDamageable>(out var dmg))
+                // Safer than GetComponent<Enemy>() alone
+                if (hits[i].TryGetComponent<Enemy>(out var enemy) && enemy != null)
                 {
-                    dmg.TakeDamage(damage);
-                }
-                else
-                {
-                    var enemy = hits[i].GetComponent<Enemy>();
-                    if (enemy) enemy.TakeDamage(damage);
+                    enemy.TakeDamage(damage);
+                    anyHit = true;
                 }
             }
 
-            // Reset cooldown ONLY after a real attack
+            // 3) If anything was hit, also play the impact sound
+            if (anyHit && sfx && hitSfx) sfx.PlayOneShot(hitSfx, hitVol);
+
+            // Start cooldown only after a real attack
             timeBtwAttack = startTimeBtwAttack;
         }
     }
@@ -100,7 +68,3 @@ public class AttackSystem : MonoBehaviour
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 }
-
-// Optional: a simple interface every damageable thing can implement
-public interface IDamageable { void TakeDamage(int amount); }
-*/

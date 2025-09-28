@@ -8320,6 +8320,11 @@ MonoBehaviour:
     m_Bits: 64
   attackRange: 0.5
   damage: 1
+  sfx: {fileID: 983791726}
+  swingSfx: {fileID: 8300000, guid: 83926e85eec77a84392199f528bd2640, type: 3}
+  hitSfx: {fileID: 8300000, guid: 7f2e8422fbb811449b265412d8a00ca5, type: 3}
+  swingVol: 1
+  hitVol: 1
 --- !u!114 &1875474797
 MonoBehaviour:
   m_ObjectHideFlags: 0
