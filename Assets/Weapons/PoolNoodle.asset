@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a700f858bcef1249a46e1ad94772981, type: 3}
   m_Name: PoolNoodle
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: bb98dd83b6f6bf046be3c44104e92f94, type: 3}
   displayName: 
   weight: 1
   weaponDamage: 1

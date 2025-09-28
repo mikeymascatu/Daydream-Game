@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CardboardSword
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  displayName: 
+  displayName: The Paper Cutter
   weight: 1
   weaponDamage: 1
   worldPrefab: {fileID: 0}
