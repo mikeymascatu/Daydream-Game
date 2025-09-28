@@ -15,7 +15,8 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] AudioSource sfx;       // assign (or it will try to auto-find in Awake)
     [SerializeField] AudioClip swingSfx;    // whoosh
     [SerializeField] AudioClip hitSfx;      // impact
-    [Range(0f,1f)] public float swingVol = 1f;
+    [SerializeField] public int totalDamage;
+    [Range(0f, 1f)] public float swingVol = 1f;
     [Range(0f,1f)] public float hitVol   = 1f;
 
     void Awake()
@@ -28,6 +29,8 @@ public class AttackSystem : MonoBehaviour
 
     void Update()
     {
+        damage = totalDamage;
+
         if (timeBtwAttack > 0f)
         {
             timeBtwAttack -= Time.deltaTime;
@@ -37,7 +40,7 @@ public class AttackSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             // 1) Do the hit check first
-            var hits = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+            var hits  = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
             int hitCount = 0;
 
             for (int i = 0; i < hits.Length; i++)

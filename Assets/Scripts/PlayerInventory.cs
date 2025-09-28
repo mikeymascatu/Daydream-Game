@@ -11,7 +11,7 @@ public class ItemStack
 public class PlayerInventory : MonoBehaviour
 {
     [Header("Inventory")]
-    public int maxSlots = 16;
+    public int maxSlots = 10;
     public List<ItemStack> items = new List<ItemStack>();
 
     [Header("Gravity settings")]
@@ -24,6 +24,9 @@ public class PlayerInventory : MonoBehaviour
     public float gravityLerpSpeed = 6f;
 
     float targetGravity;
+    public float totalDamage = 1f;
+
+    [SerializeField] AttackSystem damage;
 
     void Reset()
     {
@@ -34,6 +37,7 @@ public class PlayerInventory : MonoBehaviour
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         RecalculateGravity();
+        RecalculateDamageOutput();
     }
 
     void Update()
@@ -59,6 +63,7 @@ public class PlayerInventory : MonoBehaviour
         {
             stack.count += amount;
             RecalculateGravity();
+            RecalculateDamageOutput();
             return true;
         }
 
@@ -67,6 +72,7 @@ public class PlayerInventory : MonoBehaviour
         {
             items.Add(new ItemStack(itemToAdd, amount));
             RecalculateGravity();
+            RecalculateDamageOutput();
             return true;
         }
 
@@ -103,7 +109,7 @@ public class PlayerInventory : MonoBehaviour
         if (stack.count <= 0) items.RemoveAt(slotIndex);
 
         RecalculateGravity();
-        //RecalculateDamageOutput();
+        RecalculateDamageOutput();
         return true;
     }
 
@@ -115,15 +121,16 @@ public class PlayerInventory : MonoBehaviour
 
         targetGravity = Mathf.Clamp(baseGravityScale + totalWeight * gravityPerWeight, minGravity, maxGravity);
     }
-    /*
+
     public void RecalculateDamageOutput()
     {
-        float totalDamage = 0f;
-        foreach (var s in items){
+        foreach (var s in items)
+        {
             totalDamage += (s.item != null ? s.item.weaponDamage * s.count : 0f);
         }
+
     }
-    */
+    
 
 
     // helper: drop selected slot in front of player
