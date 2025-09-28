@@ -15395,7 +15395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  speed: -0.05
+  speed: 0.1
   contactDamage: 1
   contactCooldown: 0.5
 --- !u!50 &260121201
@@ -15600,7 +15600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   speed: -1
-  contactDamage: 1
+  contactDamage: 2
   contactCooldown: 0.5
 --- !u!50 &436292387
 Rigidbody2D:
@@ -23586,7 +23586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  speed: -0.001
+  speed: -0.05
   contactDamage: 1
   contactCooldown: 0.5
 --- !u!50 &605817854
@@ -24161,8 +24161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  speed: -0.05
-  contactDamage: 1
+  speed: 0.1
+  contactDamage: 2
   contactCooldown: 0.5
 --- !u!50 &633021800
 Rigidbody2D:
@@ -24474,14 +24474,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   meleePoint: {fileID: 835512254}
-  meleeRange: 0
-  meleeDamage: 0
-  meleeCooldown: 1
+  meleeRange: 2
+  meleeDamage: 1
+  meleeCooldown: 2
   firePoint: {fileID: 835512254}
   projectilePrefab: {fileID: 802534056}
   projectileSpeed: 8
   projectileDamage: 1
-  projectileCooldown: 3
+  projectileCooldown: 1
   faceFlipThreshold: 0.05
 --- !u!61 &780476652
 BoxCollider2D:
@@ -24543,8 +24543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   speed: 0
-  contactDamage: 1
-  contactCooldown: 0.5
+  contactDamage: 4
+  contactCooldown: 0.1
 --- !u!50 &780476654
 Rigidbody2D:
   serializedVersion: 5
@@ -25436,7 +25436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   speed: -1
-  contactDamage: 1
+  contactDamage: 2
   contactCooldown: 0.5
 --- !u!50 &1318007737
 Rigidbody2D:
@@ -26863,7 +26863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4f40bbc0c5841f7b5de618d399a258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 10
   invulnSeconds: 0.5
 --- !u!212 &74789098131046747
 SpriteRenderer:
@@ -26978,7 +26978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4267199085924324418, guid: e1b4cb41ec097458e9c8de09510c35d5, type: 3}
       propertyPath: destroyOnWalls
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5803818928367702508, guid: e1b4cb41ec097458e9c8de09510c35d5, type: 3}
       propertyPath: m_Name
