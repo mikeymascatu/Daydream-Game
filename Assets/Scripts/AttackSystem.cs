@@ -10,7 +10,6 @@ public class AttackSystem : MonoBehaviour
     public LayerMask whatIsEnemies;
     public float attackRange = 0.8f;
     public int damage = 1;
-    [SerializeField] public int totalDamage;
 
     [Header("Audio")]
     [SerializeField] AudioSource sfx;       // assign (or it will try to auto-find in Awake)
@@ -30,7 +29,6 @@ public class AttackSystem : MonoBehaviour
 
     void Update()
     {
-        damage = totalDamage;
 
         if (timeBtwAttack > 0f)
         {
