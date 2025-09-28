@@ -8514,6 +8514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 517531040}
+  - component: {fileID: 517531041}
   m_Layer: 0
   m_Name: BossGate
   m_TagString: Untagged
@@ -8530,12 +8531,28 @@ Transform:
   m_GameObject: {fileID: 517531039}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.81998044, y: 22.999321, z: -0.05700869}
+  m_LocalPosition: {x: -0.12, y: 18.42, z: -0.05700869}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &517531041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517531039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb11a6322ab04875a60789a6b84b890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 656167066}
+  gatePrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  preplacedGate: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9530,6 +9547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 656167065}
   - component: {fileID: 656167064}
+  - component: {fileID: 656167066}
   m_Layer: 0
   m_Name: Nighty Bear from Google Drive
   m_TagString: Untagged
@@ -9607,6 +9625,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &656167066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656167063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c392affced7a2f45bdf4d7760a375b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 15
+  speed: 0
+  contactDamage: 1
+  contactCooldown: 1
 --- !u!224 &971590921 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1730649190116629512, guid: 621a6fafbf8b6f4488f11c76c63b3183, type: 3}
