@@ -24325,14 +24325,14 @@ RectTransform:
   m_GameObject: {fileID: 739366824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.8588, y: 3.8588, z: 3.8588}
+  m_LocalScale: {x: 3.4105232, y: 3.4105232, z: 3.4105232}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 796359435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -126, y: 0}
+  m_AnchoredPosition: {x: -168, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739366826
@@ -24357,8 +24357,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GOOD LUCK!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dd959db21a4fa4f93a375e9dd5d155db, type: 2}
-  m_sharedMaterial: {fileID: -3664253004518885591, guid: dd959db21a4fa4f93a375e9dd5d155db, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8fdfda04cbb2eed48ad7404073f05417, type: 2}
+  m_sharedMaterial: {fileID: 2947182203587979858, guid: 8fdfda04cbb2eed48ad7404073f05417, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24707,7 +24707,7 @@ RectTransform:
   m_GameObject: {fileID: 796359434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1212, y: 1.1212, z: 1.1212}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 739366825}
@@ -26351,14 +26351,14 @@ RectTransform:
   m_GameObject: {fileID: 1788420616}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1969976, y: 5.6314926, z: 2.6065989}
+  m_LocalScale: {x: 3.0292203, y: 7.7647023, z: 3.5939786}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1684452209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.482956, y: 121.51805}
+  m_AnchoredPosition: {x: 43.482956, y: 175}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788420618
@@ -26383,8 +26383,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: hackpack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8fdfda04cbb2eed48ad7404073f05417, type: 2}
+  m_sharedMaterial: {fileID: 2947182203587979858, guid: 8fdfda04cbb2eed48ad7404073f05417, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
