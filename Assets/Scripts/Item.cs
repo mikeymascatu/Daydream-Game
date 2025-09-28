@@ -8,9 +8,9 @@ public enum SlotTag { None, Head, Chest, Legs, Feet}
 public class Item: ScriptableObject
 {
     public Sprite sprite;
-    public SlotTag itemtag;
-
-    [Header("If the item can be equipped")]
-    public GameObject equipmentPrefab;
+    public string displayName;
+    public float weight = 1f;
+    public float weaponDamage = 1f;
+    public GameObject worldPrefab;
 }
 
