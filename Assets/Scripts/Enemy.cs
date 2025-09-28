@@ -2,27 +2,63 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health;
-    public float speed;
+    [Header("Stats")]
+    public int health = 3;
+    public float speed = 2f;
 
-    private Animator anim;
-    void Start(){
+    [Header("Contact Damage")]
+    public int contactDamage = 1;
+    public float contactCooldown = 0.5f; // seconds between damage ticks while touching
+
+    Animator anim;
+    float contactTimer; // cooldown timer between hits
+
+    void Start()
+    {
         anim = GetComponent<Animator>();
-        //anim.SetBool("isRunning", true);
     }
 
-    // Update is called once per frame
-    void Update(){
-
-        if (health <= 0){
+    void Update()
+    {
+        // die
+        if (health <= 0)
+        {
             Destroy(gameObject);
+            return;
         }
+
+        // move
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+        // tick cooldown
+        if (contactTimer > 0f) contactTimer -= Time.deltaTime;
     }
+
     public void TakeDamage(int damage)
     {
         health -= damage;
-        Debug.Log("enemy damaged, health remaining:" + health);
+        Debug.Log("enemy damaged, health remaining: " + health);
+    }
 
+    // ---------- CONTACT DAMAGE ----------
+
+    // Use these if your enemy/player colliders are NOT triggers:
+    void OnCollisionEnter2D(Collision2D col)  { TryDamagePlayer(col.gameObject); }
+    void OnCollisionStay2D(Collision2D col)   { TryDamagePlayer(col.gameObject); }
+
+    // Use these if your enemy collider IS a trigger:
+    void OnTriggerEnter2D(Collider2D other)   { TryDamagePlayer(other.gameObject); }
+    void OnTriggerStay2D(Collider2D other)    { TryDamagePlayer(other.gameObject); }
+
+    void TryDamagePlayer(GameObject obj)
+    {
+        if (contactTimer > 0f) return; // still on cooldown
+
+        // Player must have a PlayerHealth component
+        if (obj.TryGetComponent<PlayerHealth>(out var playerHealth))
+        {
+            playerHealth.TakeDamage(contactDamage);
+            contactTimer = contactCooldown; // reset cooldown so we don't tick every frame
+        }
     }
 }
