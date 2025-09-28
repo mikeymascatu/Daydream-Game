@@ -35,7 +35,7 @@ public class PlayerControllerV3 : MonoBehaviour{
     // Update is called once per frame
     void Update()
     {
-        if(isGrounded == true)
+        if (isGrounded == true)
         {
             extraJumps = maxJumpsValue;
         }
@@ -44,10 +44,13 @@ public class PlayerControllerV3 : MonoBehaviour{
         {
             rb.linearVelocity = Vector2.up * jumpforce;
             extraJumps--;
-        } else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
         {
             rb.linearVelocity = Vector2.up * jumpforce;
         }
+
+        
 
 
     }
