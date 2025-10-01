@@ -121,16 +121,19 @@ public class PlayerInventory : MonoBehaviour
 
         targetGravity = Mathf.Clamp(baseGravityScale + totalWeight * gravityPerWeight, minGravity, maxGravity);
     }
-    /*
-    public int GetTotalDamage(){
-    int total = 0;
-    foreach (var stack in items){
-        if (stack.item != null)
-            total += stack.item.weaponDamage * stack.count;
-    }
+    public int GetTotalDamage()
+    {
+        int total = 0;
+        if (items == null) return total;
+
+        foreach (var stack in items){
+        if (stack == null || stack.item == null) continue;
+        // use damageBonus on the Item SO
+        total += stack.item.weaponDamage * stack.count;
+        }
+
         return total;
     }
-    */
     
 
 

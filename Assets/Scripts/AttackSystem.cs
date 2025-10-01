@@ -9,7 +9,9 @@ public class AttackSystem : MonoBehaviour
     public Transform attackPos;
     public LayerMask whatIsEnemies;
     public float attackRange = 0.8f;
-    public int damage = 1;
+    public int baseDamage = 1;
+    public int damage; // runtime effective damage
+    [SerializeField] PlayerInventory inventory; 
 
     [Header("Audio")]
     [SerializeField] AudioSource sfx;       // assign (or it will try to auto-find in Awake)
@@ -29,6 +31,10 @@ public class AttackSystem : MonoBehaviour
 
     void Update()
     {
+        if (inventory)
+        {
+            damage = inventory.GetTotalDamage();
+        }
 
         if (timeBtwAttack > 0f)
         {
