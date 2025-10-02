@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7422335868196201951}
   - component: {fileID: 2254648292045547254}
   m_Layer: 0
-  m_Name: Weapon-Stick-world
+  m_Name: Stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

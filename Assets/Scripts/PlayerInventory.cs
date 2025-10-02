@@ -109,7 +109,6 @@ public class PlayerInventory : MonoBehaviour
         if (stack.count <= 0) items.RemoveAt(slotIndex);
 
         RecalculateGravity();
-        //GetTotalDamage();
         return true;
     }
     
